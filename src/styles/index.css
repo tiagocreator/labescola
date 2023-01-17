@@ -37,3 +37,28 @@
   font-weight: 700;
   margin-block-start: 100px;
 }
+
+.section-2 {
+  padding: 50px 15%;
+  background: #000;
+  color: #fff;
+  height: auto;
+}
+
+.section-2 .about-us {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.section-2 .section-name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-block-end: 30px;
+}
+
+.section-2 .about-us p {
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
+}
