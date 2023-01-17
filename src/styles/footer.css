@@ -32,7 +32,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.links {
+.footer-section {
   margin-block-start: 75px;
 }
 
@@ -40,10 +40,29 @@
   margin-block-end: 8px;
 }
 
-.links ul li a:hover {
+.footer-link:hover {
   color: var(--darkBlue);
 }
 
 .links ul li:nth-last-child() {
   margin-block-end: 0;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-media ul {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media ul a img {
+  width: 24px;
+}
+
+.social-media ul a img:hover {
+  transform: scale(1.1);
 }
