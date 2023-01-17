@@ -66,10 +66,11 @@
 .section-2 .reviews-card-container {
   display: flex;
   justify-content: space-between;
+  gap: 0 20px;
 }
 
 .section-2 .review-card {
-  width: 260px;
+  width: auto;
   height: auto;
   background: #fff;
   border-radius: 10px;
