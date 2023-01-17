@@ -62,3 +62,31 @@
   font-size: 1.1rem;
   font-family: 'Open Sans', sans-serif;
 }
+
+.section-2 .reviews-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-2 .review-card {
+  width: 260px;
+  height: auto;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #000;
+  padding: 25px 20px;
+}
+
+.section-2 .review-card img {
+  margin-block-end: 40px;
+  width: 100px;
+}
+
+.section-2 .review-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+}
