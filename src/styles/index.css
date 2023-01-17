@@ -38,6 +38,13 @@
   margin-block-start: 100px;
 }
 
+.whatsapp-logo {
+  position: absolute;
+  bottom: 8%;
+  right: 4%;
+  width: 55px;
+}
+
 .section-2 {
   padding: 50px 15%;
   background: #000;
