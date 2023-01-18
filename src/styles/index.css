@@ -8,7 +8,9 @@
 
 .section-1 .bg-img {
   background: var(--darkOrange);
+  height: 500px;
   width: 100%;
+  overflow: hidden;
   background-position: center;
   background-size: contain;
 }
