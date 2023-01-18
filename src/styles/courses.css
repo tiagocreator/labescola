@@ -1,0 +1,51 @@
+.section-1 {
+  background: var(--darkOrange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-inline: 15%;
+  position: relative;
+}
+
+.section-1 .courses-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+}
+
+.section-1 .courses-card .card {
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.section-1 .courses-card .card h1 {
+  text-align: center;
+  margin-block-end: 50px;
+}
+
+.section-1 .courses-card .card p {
+  font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.section-1 button {
+  width: 360px;
+  height: 60px;
+  background: #000;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.whatsapp-logo {
+  position: absolute;
+  bottom: 8%;
+  right: 4%;
+  width: 55px;
+}
