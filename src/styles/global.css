@@ -27,3 +27,8 @@ a {
 ul {
   list-style: none;
 }
+
+.first-section {
+  height: 500px;
+  width: 100%;
+}
