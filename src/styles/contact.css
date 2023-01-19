@@ -1,0 +1,59 @@
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  position: relative;
+}
+
+.contact-section form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 40px;
+  border-radius: 9px;
+}
+
+.contact-section form h1 {
+  font-size: 1.3rem;
+  margin-block-end: 15px;
+}
+
+.contact-section form label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.contact-section form input {
+  height: 35px;
+  border-radius: 4px;
+  margin-block-end: 8px;
+  padding: 0 5px;
+  font-size: 1.1rem;
+  border: 2px solid #000b;
+}
+
+.contact-section form textarea {
+  resize: none;
+  border-radius: 4px;
+  margin-block-end: 8px;
+  padding: 5px;
+  font-size: 1.1rem;
+  border: 2px solid #000;
+}
+
+.contact-section form button {
+  border-radius: 4px;
+  border: none;
+  background: var(--darkOrange);
+  height: 40px;
+  font-weight: bold;
+}
+
+.whatsapp-logo {
+  position: absolute;
+  bottom: 8%;
+  right: 4%;
+  width: 55px;
+}
