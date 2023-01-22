@@ -55,19 +55,18 @@
         </div>
         <div class="student-report">
           <h1>Relatório Aluno</h1>
-          <form action="">
+          <form class="student-report-form" action="">
             <label for="name">Nome</label>
-            <input type="text" name="name" id="name" />
+            <input
+              type="search"
+              name="name"
+              class="studentName"
+              minlength="3"
+              required
+            />
             <button class="secondary-button" type="submit">Buscar</button>
           </form>
-          <div class="form-result">
-            <p>Aluno: <span>Chris Evans</span></p>
-            <p>Turma: <span>Hipátia</span></p>
-            <p>Curso: <span>Javascript</span></p>
-            <p>Valor total: <span>R$900</span></p>
-            <p>Valor parcela: <span>R$100</span></p>
-            <p>N.º parcelas: <span>9</span></p>
-          </div>
+          <div class="form-result student-report-result"></div>
         </div>
       </div>
     </main>
@@ -123,5 +122,6 @@
         </div>
       </div>
     </footer>
+    <script src="./src/scripts/financial.js" type="module"></script>
   </body>
 </html>
