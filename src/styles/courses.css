@@ -33,14 +33,8 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.section-1 button {
-  width: 360px;
-  height: 60px;
-  background: #000;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 700;
+.section-1 .enroll-btn {
+  margin-block-start: 20px;
 }
 
 .whatsapp-logo {
