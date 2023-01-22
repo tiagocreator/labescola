@@ -43,15 +43,7 @@ main {
 
 .wrapper .financial form button,
 .wrapper .student-report form button {
-  border: none;
-  background: #000;
-  color: #fff;
   margin-block-start: 20px;
-  width: 100%;
-  height: 50px;
-  border-radius: 9px;
-  font-weight: bold;
-  font-size: 1rem;
 }
 
 .wrapper .form-result {
