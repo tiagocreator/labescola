@@ -4,7 +4,7 @@ const renderClasses = () => {
   let output = '';
   turmas.map((turma) => {
     output += `
-    <div class="classe-card">
+    <div class="classe-card" id=${turma.turma}>
       <h1>${turma.turma}</h1>
       <p>Curso: <span>${turma.curso}</span></p>
       <p>Início: <span>${turma.inicio}</span></p>
@@ -19,3 +19,19 @@ const renderClasses = () => {
   classesGrid.innerHTML = output;
 };
 renderClasses();
+
+const searchField = document.querySelector('.search');
+const form = document.querySelector('.search-form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const filterSearch = searchField.value.toLowerCase();
+  const classes = document.getElementsByClassName('classe-card');
+  for (let i = 0; i < classes.length; i++) {
+    if (!classes[i].id.toLowerCase().includes(filterSearch)) {
+      classes[i].style.display = 'none';
+    } else {
+      classes[i].style.display = 'initial';
+    }
+  }
+  searchField.value = '';
+});
