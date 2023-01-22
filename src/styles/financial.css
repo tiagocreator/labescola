@@ -65,3 +65,13 @@ main {
 .student-report .form-result p span {
   font-weight: normal;
 }
+
+.clear-btn {
+  margin-block-start: 30px;
+  background: #c20000;
+  border: none;
+}
+
+.clear-btn:is(:hover, :active) {
+  background: #a70000;
+}

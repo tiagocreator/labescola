@@ -36,22 +36,47 @@
       <div class="wrapper">
         <div class="financial">
           <h1>Financeiro</h1>
-          <form action="">
+          <form class="shop-cart-form" action="">
             <label for="course">Curso</label>
-            <input type="text" name="course" id="course" list="courseName" />
+            <input
+              class="shop-cart-course"
+              type="text"
+              name="course"
+              list="courseName"
+              required
+            />
             <datalist id="courseName">
-              <option value="JavaScript">JavaScript</option>
-              <option value="HTML e CSS">HTML e CSS</option>
-              <option value="APIsRest">APIsRest</option>
+              <option value="JavaScript"></option>
+              <option value="HTML e CSS"></option>
+              <option value="APIsRest"></option>
             </datalist>
             <label for="installments">Número de parcelas</label>
-            <input type="text" name="installments" id="installments" />
+            <input
+              type="number"
+              name="installments"
+              class="installments"
+              required
+              min="1"
+              max="12"
+              list="installmentOptions"
+            />
+            <datalist id="installmentOptions">
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="5"></option>
+              <option value="6"></option>
+              <option value="7"></option>
+              <option value="8"></option>
+              <option value="9"></option>
+              <option value="10"></option>
+              <option value="11"></option>
+              <option value="12"></option>
+            </datalist>
             <button class="secondary-button" type="submit">Ver valor</button>
           </form>
-          <div class="form-result">
-            <h1>Valor</h1>
-            <p>Desconto de 20%. Parcelas de 2x de R$1880.00</p>
-          </div>
+          <div class="installment-form-result form-result"></div>
         </div>
         <div class="student-report">
           <h1>Relatório Aluno</h1>
