@@ -1,6 +1,5 @@
 .section-1 {
   height: auto;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,13 +24,6 @@
 
 .section-1 .section-content p {
   font-size: 1.5rem;
-}
-
-.whatsapp-logo {
-  position: absolute;
-  bottom: 8%;
-  right: 4%;
-  width: 55px;
 }
 
 .section-2 {
