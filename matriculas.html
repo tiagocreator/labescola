@@ -34,30 +34,21 @@
         </ul>
       </nav>
       <div class="form-container">
-        <form action="">
+        <form class="enrollment-form" action="">
           <h1>Matrículas</h1>
           <label for="name">Nome</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" class="name" />
           <label for="course">Curso</label>
-          <input type="text" name="course" id="course" />
+          <input type="text" name="course" class="course" />
           <label for="class">Turma</label>
-          <input type="text" name="class" id="class" />
+          <input type="text" name="class" class="class" />
           <label for="installments">Número de parcelas</label>
-          <input type="number" name="installments" id="installments" />
+          <input type="number" name="installments" class="installments" />
           <button class="secondary-button" type="submit">
             Matricular aluno
           </button>
         </form>
-        <div class="form-result">
-          <h1>
-            Aluno Matriculado
-            <img src="./src/img/success.png" alt="" />
-          </h1>
-          <p>Aluno Matriculado</p>
-          <p>Nome: <span>Calvin Klein</span></p>
-          <p>Curso: <span>Javascript</span></p>
-          <p>Turma: <span>Clarke</span></p>
-        </div>
+        <div class="form-result"></div>
       </div>
     </main>
     <footer class="footer">
@@ -112,5 +103,6 @@
         </div>
       </div>
     </footer>
+    <script src="./src/scripts/enrollment.js" type="module"></script>
   </body>
 </html>
