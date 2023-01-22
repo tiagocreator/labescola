@@ -33,3 +33,19 @@ ul {
   height: 500px;
   width: 100%;
 }
+
+.primary-button {
+  display: inline-block;
+  padding: 15px 70px;
+  background: #000;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-block-start: 100px;
+}
+
+.primary-button:hover {
+  transform: scale(0.99);
+  background: #181818;
+}
