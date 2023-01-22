@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/styles/global.css" />
     <link rel="stylesheet" href="./src/styles/header.css" />
     <link rel="stylesheet" href="./src/styles/sidebar.css" />
+    <link rel="stylesheet" href="./src/styles/financial.css" />
     <title>Financeiro Alunos</title>
   </head>
   <body>
@@ -32,6 +33,43 @@
           <li><a href="financeiro.html">Financeiro Alunos</a></li>
         </ul>
       </nav>
+      <div class="wrapper">
+        <div class="financial">
+          <h1>Financeiro</h1>
+          <form action="">
+            <label for="course">Curso</label>
+            <input type="text" name="course" id="course" list="courseName" />
+            <datalist id="courseName">
+              <option value="JavaScript">JavaScript</option>
+              <option value="HTML e CSS">HTML e CSS</option>
+              <option value="APIsRest">APIsRest</option>
+            </datalist>
+            <label for="installments">Número de parcelas</label>
+            <input type="text" name="installments" id="installments" />
+            <button type="submit">Ver valor</button>
+          </form>
+          <div class="form-result">
+            <h1>Valor</h1>
+            <p>Desconto de 20%. Parcelas de 2x de R$1880.00</p>
+          </div>
+        </div>
+        <div class="student-report">
+          <h1>Relatório Aluno</h1>
+          <form action="">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" />
+            <button type="submit">Buscar</button>
+          </form>
+          <div class="form-result">
+            <p>Aluno: <span>Chris Evans</span></p>
+            <p>Turma: <span>Hipátia</span></p>
+            <p>Curso: <span>Javascript</span></p>
+            <p>Valor total: <span>R$900</span></p>
+            <p>Valor parcela: <span>R$100</span></p>
+            <p>N.º parcelas: <span>9</span></p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer-content">
