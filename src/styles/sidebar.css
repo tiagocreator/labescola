@@ -6,6 +6,12 @@
   justify-content: center;
 }
 
+@media (max-width: 780px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 .sidebar ul {
   display: flex;
   gap: 30px 0;

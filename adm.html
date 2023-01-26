@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./src/styles/header.css" />
     <link rel="stylesheet" href="./src/styles/adm.css" />
     <link rel="stylesheet" href="./src/styles/sidebar.css" />
+    <link rel="stylesheet" href="./src/styles/adm-buger-menu.css" />
     <title>Área administrativa</title>
   </head>
   <body>
@@ -69,6 +70,28 @@
         <div class="classes-grid"></div>
       </div>
     </main>
+    <div>
+      <div class="bottom-menu">
+        <p>Área Administrativa</p>
+        <div class="toggle-adm-btn">
+          <img class="open-btn" src="./src/img/chevron-up.svg" alt="" />
+          <img class="close-btn" src="./src/img/chevron-down.svg" alt="" />
+        </div>
+      </div>
+      <nav class="hidden-menu">
+        <ul>
+          <li><a class="hidden-menu-link" href="adm.html">Turmas</a></li>
+          <li>
+            <a class="hidden-menu-link" href="matriculas.html">Matriculas</a>
+          </li>
+          <li>
+            <a class="hidden-menu-link" href="financeiro.html"
+              >Financeiro Alunos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
     <footer class="footer">
       <div class="footer-content">
         <div class="map">
@@ -142,5 +165,6 @@
     </footer>
     <script src="./src/scripts/classes.js" type="module"></script>
     <script src="./src/scripts/burgerMenu.js"></script>
+    <script src="./src/scripts/admMenu.js"></script>
   </body>
 </html>
