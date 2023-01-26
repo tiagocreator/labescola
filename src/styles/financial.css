@@ -13,10 +13,23 @@ main {
   min-height: 797px;
 }
 
+@media (max-width: 1366px) {
+  .wrapper {
+    padding: 100px 5% 100px 5%;
+  }
+}
+
 .wrapper .financial h1,
 .wrapper .student-report h1 {
   margin-block-end: 20px;
   font-size: 1.5rem;
+}
+
+@media (max-width: 1366px) {
+  .wrapper .financial h1,
+  .wrapper .student-report h1 {
+    font-size: 1.4rem;
+  }
 }
 
 .wrapper .financial form,
@@ -24,6 +37,13 @@ main {
   display: flex;
   flex-direction: column;
   width: 380px;
+}
+
+@media (max-width: 1366px) {
+  .wrapper .financial form,
+  .wrapper .student-report form {
+    width: 340px;
+  }
 }
 
 .wrapper .financial form label,

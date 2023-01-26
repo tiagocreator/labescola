@@ -22,8 +22,21 @@
   font-weight: 700;
 }
 
+@media (max-width: 1366px) {
+  .section-1 .section-content h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+  }
+}
+
 .section-1 .section-content p {
   font-size: 1.5rem;
+}
+
+@media (max-width: 1366px) {
+  .section-1 .section-content p {
+    font-size: 1.4rem;
+  }
 }
 
 .section-2 {
@@ -31,6 +44,12 @@
   background: #000;
   color: #fff;
   height: auto;
+}
+
+@media (max-width: 1366px) {
+  .section-2 {
+    padding: 50px 10%;
+  }
 }
 
 .section-2 .about-us {
@@ -44,6 +63,12 @@
   font-weight: 700;
   font-size: 2rem;
   margin-block-end: 30px;
+}
+
+@media (max-width: 1366px) {
+  .section-2 .section-name {
+    font-size: 1.9rem;
+  }
 }
 
 .section-2 .about-us p {

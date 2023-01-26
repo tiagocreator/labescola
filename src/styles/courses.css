@@ -8,12 +8,24 @@
   position: relative;
 }
 
+@media (max-width: 1366px) {
+  .section-1 {
+    padding-inline: 10%;
+  }
+}
+
 .section-1 .courses-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
   width: 100%;
+}
+
+@media (max-width: 1366px) {
+  .section-1 .courses-card {
+    gap: 30px;
+  }
 }
 
 .section-1 .courses-card .card {
@@ -47,11 +59,17 @@
   width: 80%;
   margin: auto;
   padding: 100px 15%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+@media (max-width: 1366px) {
+  .section-container {
+    width: 85%;
+    padding: 100px 10%;
+  }
 }
 
 .courses-description-card {
