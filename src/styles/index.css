@@ -10,6 +10,13 @@
   overflow: hidden;
   background-position: center;
   background-size: contain;
+  height: 500px;
+}
+
+@media (max-width: 1024px) {
+  .section-1 .bg-img {
+    height: 380px;
+  }
 }
 
 .section-1 .section-content {
@@ -26,6 +33,12 @@
   .section-1 .section-content h1 {
     font-size: 2.6rem;
     font-weight: 700;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-1 .section-content h1 {
+    font-size: 2.3rem;
   }
 }
 
@@ -58,6 +71,12 @@
   margin-bottom: 100px;
 }
 
+@media (max-width: 1024px) {
+  .section-2 .about-us {
+    width: 90%;
+  }
+}
+
 .section-2 .section-name {
   text-align: center;
   font-weight: 700;
@@ -80,6 +99,18 @@
   display: flex;
   justify-content: space-between;
   gap: 0 20px;
+}
+
+.section-2 .reviews-card-container div {
+  display: flex;
+  gap: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .section-2 .reviews-card-container div {
+    flex-direction: column;
+    gap: 20px 0;
+  }
 }
 
 .section-2 .review-card {

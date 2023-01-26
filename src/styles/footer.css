@@ -9,6 +9,13 @@
   padding-block: 30px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    justify-content: space-around;
+  }
 }
 
 @media (max-width: 1366px) {
@@ -59,6 +66,12 @@
 
 .links ul li {
   margin-block-end: 8px;
+}
+
+@media (max-width: 1024px) {
+  .links {
+    margin-inline: 40px;
+  }
 }
 
 .footer-link:hover {

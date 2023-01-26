@@ -13,9 +13,30 @@ main {
   min-height: 797px;
 }
 
+@media (max-width: 1366px) {
+  .form-container {
+    padding: 100px 8% 100px 8%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-container {
+    padding-block: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .form-container form {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .form-container form {
+    margin-block-end: 80px;
+  }
 }
 
 .form-container form h1 {
@@ -31,6 +52,12 @@ main {
   margin-block-end: 5px;
   font-size: 1.1rem;
   padding: 0 10px;
+}
+
+@media (max-width: 1024px) {
+  .form-container form input {
+    width: 380px;
+  }
 }
 
 .form-container form label {
