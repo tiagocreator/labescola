@@ -86,3 +86,11 @@ button {
   right: 4%;
   width: 55px;
 }
+
+@media (max-width: 780px) {
+  .whatsapp-logo {
+    bottom: 4%;
+    right: 3%;
+    width: 45px;
+  }
+}
