@@ -6,6 +6,12 @@
   position: relative;
 }
 
+@media (max-width: 550px) {
+  .contact-section {
+    height: auto;
+  }
+}
+
 .contact-section form {
   width: 400px;
   display: flex;
@@ -13,6 +19,15 @@
   background: #fff;
   padding: 40px;
   border-radius: 9px;
+}
+
+@media (max-width: 550px) {
+  .contact-section form {
+    padding: 50px 30px;
+    width: 100%;
+    border-radius: 0px;
+    height: 100%;
+  }
 }
 
 .contact-section form h1 {

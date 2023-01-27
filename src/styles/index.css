@@ -19,6 +19,12 @@
   }
 }
 
+@media (max-width: 550px) {
+  .section-1 .bg-img {
+    height: 300px;
+  }
+}
+
 .section-1 .section-content {
   position: absolute;
   text-align: center;
@@ -42,6 +48,12 @@
   }
 }
 
+@media (max-width: 550px) {
+  .section-1 .section-content h1 {
+    font-size: 1.6rem;
+  }
+}
+
 .section-1 .section-content p {
   font-size: 1.5rem;
 }
@@ -49,6 +61,13 @@
 @media (max-width: 1366px) {
   .section-1 .section-content p {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .section-1 .section-content p {
+    font-size: 1.1rem;
+    padding-inline: 30px;
   }
 }
 
@@ -90,15 +109,35 @@
   }
 }
 
+@media (max-width: 550px) {
+  .section-2 .section-name {
+    font-size: 1.5rem;
+  }
+}
+
 .section-2 .about-us p {
   font-size: 1.1rem;
   font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 550px) {
+  .section-2 .about-us p {
+    font-size: 1rem;
+  }
 }
 
 .section-2 .reviews-card-container {
   display: flex;
   justify-content: space-between;
   gap: 0 20px;
+}
+
+@media (max-width: 550px) {
+  .section-2 .reviews-card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
 }
 
 .section-2 .reviews-card-container div {
@@ -110,6 +149,13 @@
   .section-2 .reviews-card-container div {
     flex-direction: column;
     gap: 20px 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .section-2 .reviews-card-container div {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -129,6 +175,12 @@
 .section-2 .review-card img {
   margin-block-end: 40px;
   width: 100px;
+}
+
+@media (max-width: 550px) {
+  .section-2 .review-card img {
+    margin-block-end: 10px;
+  }
 }
 
 .section-2 .review-card p {

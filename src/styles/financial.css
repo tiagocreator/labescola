@@ -26,6 +26,13 @@ main {
   }
 }
 
+@media (max-width: 550px) {
+  .wrapper {
+    padding: 40px 10px 40px 10px;
+    min-height: 650px;
+  }
+}
+
 .wrapper .financial h1,
 .wrapper .student-report h1 {
   margin-block-end: 20px;
@@ -57,6 +64,13 @@ main {
   .wrapper .financial form,
   .wrapper .student-report form {
     width: 380px;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrapper .financial form,
+  .wrapper .student-report form {
+    width: 310px;
   }
 }
 
