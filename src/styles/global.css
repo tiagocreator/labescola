@@ -5,6 +5,9 @@
   --darkBlue: #005f63;
   --darkOrange: #f6c34a;
   --gray: #707070;
+  --success-color: #65dd65;
+  --error-color: #e04949;
+  --darkGreen: #007e00;
 }
 
 * {
