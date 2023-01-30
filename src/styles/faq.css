@@ -10,6 +10,24 @@
   background: var(--lightGray);
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 50px 20% 100px 20%;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    padding: 50px 15% 100px 15%;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 50px 30px 100px 30px;
+  }
+}
+
 .container h1 {
   margin-block-end: 50px;
 }
@@ -96,9 +114,21 @@
 
 .accordion button[aria-expanded='true'] + .accordion-content {
   opacity: 1;
-  max-height: 9rem;
+  max-height: 150px;
   transition: all 200ms linear;
   will-change: opacity, max-height;
+}
+
+@media (max-width: 780px) {
+  .accordion button[aria-expanded='true'] + .accordion-content {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 550px) {
+  .accordion button[aria-expanded='true'] + .accordion-content {
+    max-height: 220px;
+  }
 }
 
 .accordion .accordion-content {
