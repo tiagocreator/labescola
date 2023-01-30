@@ -73,8 +73,10 @@
 
 .section-2 {
   padding: 50px 15%;
-  background: #000;
+  background: url('../img/index/reviews-bg.jpg');
   color: #fff;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
   height: auto;
 }
 
@@ -116,7 +118,7 @@
 }
 
 .section-2 .about-us p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -173,17 +175,37 @@
 }
 
 .section-2 .review-card img {
-  margin-block-end: 40px;
+  margin-block-end: 20px;
   width: 100px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1024px) {
   .section-2 .review-card img {
     margin-block-end: 10px;
   }
 }
 
+.section-2 .review-card .stars {
+  display: flex;
+  flex-direction: row;
+  gap: 0 4px;
+  color: var(--darkOrange);
+}
+
+@media (max-width: 550px) {
+  .section-2 .review-card .stars {
+    margin-inline-start: 15px;
+  }
+}
+
 .section-2 .review-card p {
+  margin-block-start: 15px;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
+}
+
+@media (max-width: 550px) {
+  .section-2 .review-card p {
+    margin-block-start: 5px;
+  }
 }
