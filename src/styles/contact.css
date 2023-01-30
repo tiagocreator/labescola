@@ -2,8 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
-  position: relative;
+  background: url('../img/contact/bg-1.jpg');
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.9);
+  height: 650px;
 }
 
 @media (max-width: 550px) {
@@ -12,56 +14,174 @@
   }
 }
 
-.contact-section form {
+.container {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   width: 400px;
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  padding: 40px;
-  border-radius: 9px;
+  position: relative;
 }
 
 @media (max-width: 550px) {
-  .contact-section form {
-    padding: 50px 30px;
+  .container {
+    border-radius: 0;
+    box-shadow: none;
     width: 100%;
-    border-radius: 0px;
-    height: 100%;
+    padding-block-end: 30px;
   }
 }
 
-.contact-section form h1 {
-  font-size: 1.3rem;
-  margin-block-end: 15px;
+.form {
+  padding: 30px 40px;
+  z-index: 1;
 }
 
-.contact-section form label {
-  font-size: 0.9rem;
-  font-weight: bold;
+@media (max-width: 550px) {
+  .form {
+    padding: 10px 20px;
+  }
 }
 
-.contact-section form input {
-  height: 35px;
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: #636363;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 2px solid #aaaaaa;
   border-radius: 4px;
-  margin-block-end: 8px;
-  padding: 0 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
   font-size: 1.1rem;
-  border: 2px solid #000b;
 }
 
-.contact-section form textarea {
+@media (max-width: 550px) {
+  .form-control input,
+  .form-control textarea {
+    font-size: 1rem;
+  }
+}
+
+.form-control textarea {
   resize: none;
-  border-radius: 4px;
-  margin-block-end: 8px;
-  padding: 5px;
-  font-size: 1.1rem;
-  border: 2px solid #000;
 }
 
-.contact-section form button {
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input,
+.form-control.success textarea {
+  border-color: var(--success-color);
+}
+
+.form-control.error input,
+.form-control.error textarea {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 550px) {
+  .form-control.error small {
+    font-size: 0.8rem;
+  }
+}
+
+.form .submit {
+  background-color: var(--darkGreen);
+  border: 2px solid var(--darkGreen);
   border-radius: 4px;
-  border: none;
-  background: var(--darkOrange);
-  height: 40px;
+  color: white;
+  display: block;
+  font-size: 1.1rem;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  margin-top: 1.2rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .form .submit {
+    margin-top: 1rem;
+  }
+}
+
+.spinner {
+  margin-block-start: 30px;
+  width: 50px;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+@media (max-width: 550px) {
+  .modal {
+    padding: 20px;
+    border-block: 4px solid #777;
+  }
+}
+
+.modal .modal-btn {
+  visibility: hidden;
+  position: absolute;
+  top: 5%;
+  right: 8%;
+  cursor: pointer;
+}
+
+.modal .modal-btn .fa-times-circle {
+  color: var(--error-color);
+  font-size: 3rem;
+}
+
+.modal .modal-btn .fa-times-circle:is(:hover, :focus) {
+  color: var(--error-color);
+  transform: scale(0.95);
+  color: red;
+}
+
+.modal .modal-text {
+  letter-spacing: 1px;
+}
+
+.modal .fa-check {
+  color: var(--success-color);
+  font-size: 5rem;
+  margin-top: 30px;
 }
