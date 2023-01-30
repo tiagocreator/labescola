@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="./src/styles/header.css" />
     <link rel="stylesheet" href="./src/styles/footer.css" />
     <link rel="stylesheet" href="./src/styles/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <title>Contato</title>
   </head>
   <body>
@@ -49,16 +53,52 @@
     </header>
     <main>
       <section class="first-section contact-section">
-        <form action="">
-          <h1>Fale Conosco</h1>
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" />
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <label for="message">Mensagem</label>
-          <textarea name="message" id="message" cols="30" rows="5"></textarea>
-          <button type="submmit">Enviar</button>
-        </form>
+        <div class="container">
+          <form class="form">
+            <h1>Fale Conosco</h1>
+            <div class="form-control">
+              <label for="name">Nome</label>
+              <input
+                type="text"
+                name="name"
+                class="username requiredField"
+                placeholder="Nome completo"
+              />
+              <small>erro</small>
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                class="email requiredField"
+                placeholder="Endereço de email"
+              />
+              <small>erro</small>
+            </div>
+            <div class="form-control">
+              <label for="message">Mensagem</label>
+              <textarea
+                name="message"
+                class="message requiredField"
+                cols="30"
+                rows="5"
+                placeholder="Oi, eu gostaria de entrar em contato...."
+              ></textarea>
+              <small>erro</small>
+            </div>
+            <button class="submit" type="submmit">Enviar</button>
+          </form>
+          <div class="modal">
+            <div class="modal-btn"><i class="far fa-times-circle"></i></div>
+
+            <h3 class="modal-text">Enviando mensagem...</h3>
+
+            <div class="loader">
+              <img src="./src/img/contact/loading.svg" class="spinner" />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -146,5 +186,6 @@
       <img class="whatsapp-logo" src="./src/img/whatsapp-logo.png" alt="" />
     </a>
     <script src="./src/scripts/burgerMenu.js"></script>
+    <script src="./src/scripts/validateContactForm.js"></script>
   </body>
 </html>
