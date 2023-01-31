@@ -110,19 +110,13 @@
   }
 }
 
-.form .submit {
-  background-color: var(--darkGreen);
-  border: 2px solid var(--darkGreen);
-  border-radius: 4px;
-  color: white;
-  display: block;
-  font-size: 1.1rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  padding: 10px;
-  margin-top: 1.2rem;
-  width: 100%;
-  cursor: pointer;
+.secondary-button {
+  margin-block-start: 0;
+  background: var(--darkBlue);
+}
+
+.secondary-button:is(:hover, :focus) {
+  background: var(--darkBlue);
 }
 
 @media (max-width: 550px) {
