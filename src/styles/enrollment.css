@@ -60,14 +60,27 @@ main {
   padding: 0 10px;
 }
 
+.form-container form input:is(:hover, :focus) {
+  outline: 2px solid var(--darkBlue);
+  border-radius: 2px;
+}
+
+.checkbox-wrapper {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 1024px) {
-  .form-container form input {
+  .form-container form input,
+  .checkbox-wrapper {
     width: 380px;
   }
 }
 
 @media (max-width: 550px) {
-  .form-container form input {
+  .form-container form input,
+  .checkbox-wrapper {
     width: 300px;
   }
 }
@@ -102,4 +115,31 @@ main {
 
 .form-result p span {
   font-weight: normal;
+}
+
+.checkbox-wrapper .checkbox-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.checkbox-wrapper .checkbox-container input {
+  width: 25px;
+  height: 25px;
+  margin-inline-end: 30px;
+  margin-block: 5px;
+}
+
+.checkbox-wrapper .checkbox-container input:is(:hover, :focus) {
+  outline: none;
+}
+
+.enrollment-form .course {
+  font-size: 1rem;
+}
+
+.enrollment-form .course:is(:hover, :focus) {
+  user-select: none;
+  outline: none;
 }

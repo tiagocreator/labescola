@@ -61,13 +61,63 @@
         <form class="enrollment-form" action="">
           <h1>Matrículas</h1>
           <label for="name">Nome</label>
-          <input type="text" name="name" class="name" />
+          <input
+            type="text"
+            name="name"
+            class="name"
+            placeholder="Nome completo"
+            required
+          />
           <label for="course">Curso</label>
-          <input type="text" name="course" class="course" />
+          <input
+            type="text"
+            name="course"
+            class="course"
+            placeholder="Selecione abaixo"
+            readonly="readonly"
+          />
+          <div class="checkbox-wrapper">
+            <div class="checkbox-container">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="HTML e CSS"
+                value="HTML e CSS"
+              />
+              <label for="HTML e CSS">HTML e CSS</label>
+            </div>
+            <div class="checkbox-container">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="JavaScript"
+                value="JavaScript"
+              />
+              <label for="JavaScript">JavaScript</label>
+            </div>
+            <div class="checkbox-container">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="APIsRest"
+                value="APIsRest"
+              />
+              <label for="APIsRest">APIsRest</label>
+            </div>
+          </div>
+
           <label for="class">Turma</label>
-          <input type="text" name="class" class="class" />
+          <input type="text" name="class" class="class" required />
           <label for="installments">Número de parcelas</label>
-          <input type="number" name="installments" class="installments" />
+          <input
+            type="number"
+            name="installments"
+            class="installments"
+            placeholder="Em até 3 vezes sem juros"
+            required
+            min="1"
+            max="12"
+          />
           <button class="secondary-button" type="submit">
             Matricular aluno
           </button>
