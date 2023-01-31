@@ -20,18 +20,30 @@ const renderClasses = () => {
 };
 renderClasses();
 
+const showAll = document.querySelector('.show-all');
+showAll.addEventListener('click', () => {
+  window.location.reload();
+});
+
 const searchField = document.querySelector('.search');
 const form = document.querySelector('.search-form');
+const warning = document.querySelector('.not-found');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  warning.style.display = 'none';
+  const containerArr = [];
   const filterSearch = searchField.value.toLowerCase();
   const classes = document.getElementsByClassName('classe-card');
   for (let i = 0; i < classes.length; i++) {
     if (!classes[i].id.toLowerCase().includes(filterSearch)) {
       classes[i].style.display = 'none';
+      containerArr.push(classes[i]);
     } else {
       classes[i].style.display = 'initial';
     }
   }
+
+  if (containerArr.length === classes.length) warning.style.display = 'flex';
+
   searchField.value = '';
 });
