@@ -66,14 +66,38 @@
               class="shop-cart-course"
               type="text"
               name="course"
-              list="courseName"
-              required
+              readonly="readonly"
+              placeholder="Selecione abaixo"
             />
-            <datalist id="courseName">
-              <option value="JavaScript"></option>
-              <option value="HTML e CSS"></option>
-              <option value="APIsRest"></option>
-            </datalist>
+            <div class="checkbox-wrapper">
+              <div class="checkbox-container">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="HTML e CSS"
+                  value="HTML e CSS"
+                />
+                <label for="HTML e CSS">HTML e CSS</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="JavaScript"
+                  value="JavaScript"
+                />
+                <label for="JavaScript">JavaScript</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="APIsRest"
+                  value="APIsRest"
+                />
+                <label for="APIsRest">APIsRest</label>
+              </div>
+            </div>
             <label for="installments">Número de parcelas</label>
             <input
               type="number"
@@ -83,6 +107,7 @@
               min="1"
               max="12"
               list="installmentOptions"
+              placeholder="Desconto de 20% em até 2x"
             />
             <datalist id="installmentOptions">
               <option value="1"></option>
@@ -111,6 +136,7 @@
               name="name"
               class="studentName"
               minlength="3"
+              placeholder="Nome do aluno"
               required
             />
             <button class="secondary-button" type="submit">Buscar</button>
