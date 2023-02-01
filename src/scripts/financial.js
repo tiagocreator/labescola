@@ -1,5 +1,6 @@
 import { alunos, cursos } from './data.js';
 
+//Formulario Estudantes
 const searchField = document.querySelector('.studentName');
 const studentsForm = document.querySelector('.student-report-form');
 const studentsFormResult = document.querySelector('.student-report-result');
@@ -26,7 +27,23 @@ studentsForm.addEventListener('submit', (e) => {
   searchField.value = '';
 });
 
-let coursesArr = [];
+//Formulario Financeiro
+let checkboxesArr = [];
+
+const checkboxes = document.querySelectorAll('.checkbox');
+const shopCartCourse = document.querySelector('.shop-cart-course');
+
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', () => {
+    if (!checkboxesArr.includes(checkbox.value)) {
+      checkboxesArr.push(checkbox.value);
+    } else {
+      checkboxesArr.pop(checkbox.value);
+    }
+    shopCartCourse.value = checkboxesArr.join(', ');
+  });
+});
+
 let courseValue = 0;
 let installmentValue = 0;
 
@@ -34,34 +51,49 @@ const shopCartForm = document.querySelector('.shop-cart-form');
 shopCartForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const courseInput = document.querySelector('.shop-cart-course');
-
-  if (!coursesArr.includes(courseInput.value)) {
-    coursesArr.push(courseInput.value);
-  }
-
-  for (let i = 0; i < cursos.length; i++) {
-    if (courseInput.value === cursos[i].curso) {
-      courseValue += cursos[i].valor;
+  for (let i = 0; i < checkboxesArr.length; i++) {
+    for (let j = 0; j < cursos.length; j++) {
+      if (checkboxesArr[i] === cursos[j].curso) {
+        courseValue += cursos[j].valor;
+      }
     }
   }
 
-  installmentValue = document.querySelector('.installments').value;
+  const calculateDiscout = () => {
+    let discount = 20;
+    return installmentValue <= 2
+      ? courseValue - courseValue * (discount / 100)
+      : courseValue;
+  };
 
+  installmentValue = document.querySelector('.installments').value;
   const shopCartFormResult = document.querySelector('.installment-form-result');
   shopCartFormResult.innerHTML = `
-  <h1>${coursesArr.length < 2 ? 'Curso' : 'Cursos'}</h1>
-  <p><strong>${coursesArr.join(', ')}</strong></p>
+  <h1>${checkboxesArr.length < 2 ? 'Curso' : 'Cursos'}</h1>
+  <p><strong>${checkboxesArr.join(', ')}</strong></p>
   <br/>
   <h1>Valor</h1>
-  <p>Valor total de <strong>R$:${courseValue},00</strong> dividido em <strong>${installmentValue}</strong> vezes de <strong>${(
-    courseValue / installmentValue
-  ).toFixed(2)}</strong> reais<p>
+  <p>Valor total de <strong>R$:${calculateDiscout()},00</strong> dividido em <strong>${installmentValue}</strong> ${
+    installmentValue > 1 ? 'vezes' : 'vez'
+  } de <strong>${(calculateDiscout() / installmentValue).toFixed(
+    2
+  )}</strong> reais.</p>
+  ${
+    installmentValue <= 2
+      ? '<p>Foi condedido um desconto de <strong>20%.</strong></p>'
+      : ''
+  }
     <button class="clear-btn primary-button">Limpar</button>
   `;
 
+  shopCartForm.reset();
+  courseValue = 0;
+  checkboxesArr = [];
+  shopCartCourse.value = '';
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
   document.querySelector('.installments').value = '';
-  courseInput.value = '';
 
   document.querySelector('.clear-btn').addEventListener('click', () => {
     shopCartFormResult.innerHTML = '';
