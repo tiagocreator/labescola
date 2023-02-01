@@ -89,6 +89,22 @@ main {
   font-weight: bold;
 }
 
+.form-result {
+  width: 300px;
+}
+
+@media (max-width: 1024px) {
+  .form-result {
+    width: 380px;
+  }
+}
+
+@media (max-width: 550px) {
+  .form-result {
+    width: 300px;
+  }
+}
+
 .form-result h1 {
   display: flex;
   align-items: center;
