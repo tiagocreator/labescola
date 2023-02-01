@@ -96,11 +96,25 @@ main {
 
 .wrapper .form-result {
   margin-block-start: 80px;
+  max-width: 380px;
+}
+
+@media (max-width: 1366px) {
+  .wrapper .form-result {
+    width: 320px;
+  }
 }
 
 @media (max-width: 1024px) {
   .wrapper .form-result {
+    width: 380px;
     margin-block-start: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrapper .form-result {
+    width: 310px;
   }
 }
 
@@ -110,7 +124,7 @@ main {
 
 .wrapper .form-result p {
   font-size: 1.1rem;
-  width: 380px;
+  max-width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -136,4 +150,32 @@ main {
 
 .clear-btn:is(:hover, :active) {
   background: #a70000;
+}
+
+.checkbox-wrapper {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-wrapper .checkbox-container {
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
+
+.checkbox-wrapper .checkbox-container input {
+  width: 25px;
+  height: 25px;
+  margin-inline-end: 30px;
+  margin-block: 5px;
+}
+
+.checkbox-wrapper .checkbox-container input:is(:hover, :focus) {
+  outline: none;
+}
+
+.shop-cart-form .shop-cart-course:is(:hover, :focus) {
+  user-select: none;
+  outline: none;
 }
