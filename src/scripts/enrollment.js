@@ -1,8 +1,9 @@
-import { alunos } from './data.js';
+import { alunos, cursos } from './data.js';
 
 const newStudentsArr = [...alunos];
 
 let checkboxesArr = [];
+
 const checkboxes = document.querySelectorAll('.checkbox');
 const studentCourse = document.querySelector('.course');
 
@@ -17,12 +18,23 @@ checkboxes.forEach((checkbox) => {
   });
 });
 
+let courseValue = 0;
+let studentInstallments = 0;
+
 const form = document.querySelector('.enrollment-form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const studentName = document.querySelector('.name').value;
   const studentClass = document.querySelector('.class').value;
-  const studentInstallments = document.querySelector('.installments').value;
+  studentInstallments = document.querySelector('.installments').value;
+
+  for (let i = 0; i < checkboxesArr.length; i++) {
+    for (let j = 0; j < cursos.length; j++) {
+      if (checkboxesArr[i] === cursos[j].curso) {
+        courseValue += cursos[j].valor;
+      }
+    }
+  }
 
   newStudentsArr.push({
     estudante: studentName,
@@ -35,6 +47,14 @@ form.addEventListener('submit', (e) => {
 
 const showResult = () => {
   const resultContainer = document.querySelector('.form-result');
+
+  const installmentDiscout = () => {
+    let discount = 20;
+    return studentInstallments <= 2
+      ? courseValue - courseValue * (discount / 100)
+      : courseValue;
+  };
+
   resultContainer.innerHTML = `
     <h1>Aluno Matriculado<img src="./src/img/success.png" alt="" /></h1>
     <p>Nome: <span>${
@@ -46,10 +66,18 @@ const showResult = () => {
     <p>Turma: <span>${
       newStudentsArr[newStudentsArr.length - 1].turma
     }</span></p>
+    <br/>
+    <p>O valor do pagamento é de R$:${installmentDiscout()},00${
+    studentInstallments <= 2 ? ' com 20% de desconto' : ''
+  }.</p>
+    <br/>
+    <p>Parcelado em ${studentInstallments}</strong> ${
+    studentInstallments > 1 ? 'vezes' : 'vez'
+  } de R$:${(installmentDiscout() / studentInstallments).toFixed(2)} reais.</p>
   `;
   form.reset();
+  courseValue = 0;
   checkboxesArr = [];
-  studentCourse.value = '';
   checkboxes.forEach((checkbox) => {
     checkbox.checked = false;
   });
