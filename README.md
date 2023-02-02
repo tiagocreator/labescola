@@ -2,6 +2,6 @@
 
 ---
 
-## [Clique aqui para ver o projeto online](labescola.vercel.app)
+## [Clique aqui para ver o projeto online](https://labescola.vercel.app)
 
 ## :construction: PROJETO EM CONSTRUÇÃO :construction:
