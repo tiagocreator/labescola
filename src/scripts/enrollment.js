@@ -1,4 +1,15 @@
-import { alunos, cursos } from './data.js';
+import { alunos, cursos, turmas } from './data.js';
+
+const generateClassOptions = () => {
+  let output = '';
+  turmas.map((turma) => {
+    output += `
+      <option value="${turma.turma}"></option>
+    `;
+  });
+  document.querySelector('#classOptions').innerHTML = output;
+};
+generateClassOptions();
 
 const newStudentsArr = [...alunos];
 

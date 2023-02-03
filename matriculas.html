@@ -108,7 +108,15 @@
           </div>
 
           <label for="class">Turma</label>
-          <input type="text" name="class" class="class" required />
+          <input
+            type="text"
+            name="class"
+            class="class"
+            required
+            list="classOptions"
+          />
+          <datalist id="classOptions"></datalist>
+
           <label for="installments">Número de parcelas</label>
           <input
             type="number"
