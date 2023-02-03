@@ -55,6 +55,21 @@ const showResult = () => {
       : courseValue;
   };
 
+  const coursesDiscount = () => {
+    let discountPercentage = 0;
+    if (checkboxesArr.length < 2) {
+      return;
+    } else if (checkboxesArr.length === 2) {
+      discountPercentage = 10;
+      return (courseValue * discountPercentage) / 100;
+    } else {
+      discountPercentage = 15;
+      return (courseValue * discountPercentage) / 100;
+    }
+  };
+
+  console.log(coursesDiscount());
+
   resultContainer.innerHTML = `
     <h1>Aluno Matriculado<img src="./src/img/success.png" alt="" /></h1>
     <p>Nome: <span>${
@@ -67,8 +82,16 @@ const showResult = () => {
       newStudentsArr[newStudentsArr.length - 1].turma
     }</span></p>
     <br/>
-    <p>O valor do pagamento é de R$:${installmentDiscout()},00${
-    studentInstallments <= 2 ? ' com 20% de desconto' : ''
+    <p>O valor do pagamento é de R$:${
+      installmentDiscout() - coursesDiscount()
+    },00${
+    studentInstallments <= 2 ? ' com 20% de desconto em até 2 parcelas' : ''
+  }${
+    checkboxesArr.length === 2
+      ? ', na compra de 2 cursos, tem um desconto adicional de 10%'
+      : checkboxesArr.length === 3
+      ? ', na compra de 3 cursos, tem um desconto adicional de 15%'
+      : ''
   }.</p>
     <br/>
     <p>Parcelado em ${studentInstallments}</strong> ${
