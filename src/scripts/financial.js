@@ -59,11 +59,28 @@ shopCartForm.addEventListener('submit', (e) => {
     }
   }
 
-  const calculateDiscout = () => {
+  const installmentDiscout = () => {
     let discount = 20;
     return installmentValue <= 2
       ? courseValue - courseValue * (discount / 100)
       : courseValue;
+  };
+
+  const coursesDiscount = () => {
+    let discountPercentage = 0;
+    if (checkboxesArr.length < 2) {
+      return discountPercentage;
+    } else if (checkboxesArr.length === 2) {
+      discountPercentage = 10;
+      return (courseValue * discountPercentage) / 100;
+    } else {
+      discountPercentage = 15;
+      return (courseValue * discountPercentage) / 100;
+    }
+  };
+
+  const totalValue = () => {
+    return installmentDiscout() - coursesDiscount();
   };
 
   installmentValue = document.querySelector('.installments').value;
@@ -73,14 +90,22 @@ shopCartForm.addEventListener('submit', (e) => {
   <p><strong>${checkboxesArr.join(', ')}</strong></p>
   <br/>
   <h1>Valor</h1>
-  <p>Valor total de <strong>R$:${calculateDiscout()},00</strong> dividido em <strong>${installmentValue}</strong> ${
+  <p>Valor total de <strong>R$:${totalValue()},00</strong> dividido em <strong>${installmentValue}</strong> ${
     installmentValue > 1 ? 'vezes' : 'vez'
-  } de <strong>${(calculateDiscout() / installmentValue).toFixed(
+  } de <strong>${(totalValue() / installmentValue).toFixed(
     2
   )}</strong> reais.</p>
   ${
     installmentValue <= 2
-      ? '<p>Foi condedido um desconto de <strong>20%.</strong></p>'
+      ? '<p>Foi condedido um desconto de <strong>20%</strong> parcelado em até 2 vezes.</p>'
+      : ''
+  }
+  </br>
+  ${
+    checkboxesArr.length === 2
+      ? '<p>Na compra de <strong>2 cursos</strong>, tem um desconto adicional de <strong>10%</strong></p>'
+      : checkboxesArr.length === 3
+      ? '<p>Na compra de <strong>3 cursos</strong>, tem um desconto adicional de <strong>15%</strong></p>'
       : ''
   }
     <button class="clear-btn primary-button">Limpar</button>

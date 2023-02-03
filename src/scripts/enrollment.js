@@ -58,7 +58,7 @@ const showResult = () => {
   const coursesDiscount = () => {
     let discountPercentage = 0;
     if (checkboxesArr.length < 2) {
-      return;
+      return discountPercentage;
     } else if (checkboxesArr.length === 2) {
       discountPercentage = 10;
       return (courseValue * discountPercentage) / 100;
@@ -68,7 +68,9 @@ const showResult = () => {
     }
   };
 
-  console.log(coursesDiscount());
+  const totalValue = () => {
+    return installmentDiscout() - coursesDiscount();
+  };
 
   resultContainer.innerHTML = `
     <h1>Aluno Matriculado<img src="./src/img/success.png" alt="" /></h1>
@@ -82,9 +84,7 @@ const showResult = () => {
       newStudentsArr[newStudentsArr.length - 1].turma
     }</span></p>
     <br/>
-    <p>O valor do pagamento é de R$:${
-      installmentDiscout() - coursesDiscount()
-    },00${
+    <p>O valor do pagamento é de R$:${totalValue()},00${
     studentInstallments <= 2 ? ' com 20% de desconto em até 2 parcelas' : ''
   }${
     checkboxesArr.length === 2
@@ -96,7 +96,7 @@ const showResult = () => {
     <br/>
     <p>Parcelado em ${studentInstallments}</strong> ${
     studentInstallments > 1 ? 'vezes' : 'vez'
-  } de R$:${(installmentDiscout() / studentInstallments).toFixed(2)} reais.</p>
+  } de R$:${(totalValue() / studentInstallments).toFixed(2)} reais.</p>
   `;
   form.reset();
   courseValue = 0;
