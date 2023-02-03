@@ -90,6 +90,10 @@ button {
   width: 55px;
 }
 
+.whatsapp-logo:is(:hover, :focus) {
+  transform: scale(1.05);
+}
+
 @media (max-width: 780px) {
   .whatsapp-logo {
     bottom: 4%;
